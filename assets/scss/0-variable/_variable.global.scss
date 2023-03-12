@@ -1,0 +1,15 @@
+/* ==========================================================================
+   SETTINGS GLOBAL
+========================================================================== */
+
+// Media Queries Breakpoints
+$breakpoints: (
+  "phone-small": 320px,
+  "phone": 360px,
+  "phone-wide": 576px,
+  "tablet": 768px,
+  "tablet-wide": 1024px,
+  "desktop": 1200px,
+  "desktop-wide": 1440px,
+  "full-hd": 1920px,
+);

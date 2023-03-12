@@ -1,0 +1,103 @@
+// Setting style of a font
+@mixin font(
+  $font: false,
+  $size: false,
+  $weight: false,
+  $color: false,
+  $line-height: false
+) {
+  font-family: $font;
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $color {
+    color: $color;
+  }
+
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
+
+// Display Flex
+@mixin flex(
+  $direction: false,
+  $justify-content: false,
+  $align-items: false,
+  $wrap: nowrap
+) {
+  display: flex;
+
+  @if $direction {
+    flex-direction: $direction;
+  }
+
+  @if $justify-content {
+    justify-content: $justify-content;
+  }
+
+  @if $align-items {
+    align-items: $align-items;
+  }
+
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type==max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+@mixin nth-child-before-hover($nth, $content, $color) {
+  &:nth-child(#{$nth}) {
+    a {
+      &:before {
+        content: $content;
+        color: $color;
+      }
+    }
+    &:hover {
+      span {
+        box-shadow: inset 200px 0 0 0 $color;
+      }
+    }
+  }
+}
+
+@mixin typing-text-line(
+  $name-animation,
+  $name-line,
+  $time-animation,
+  $time-delay
+) {
+  ~ .#{$name-line}-line {
+    border-right: 2px solid $grey;
+    animation: $name-animation 3s steps(39) 0.3s 1 normal both,
+      one-cursor 350ms steps(39) $time-animation;
+    -webkit-animation-delay: $time-delay;
+    animation-delay: $time-delay;
+  }
+}
+
+@mixin color-and-hover($color) {
+  color: $color;
+  &:hover {
+    background-color: $color;
+  }
+}

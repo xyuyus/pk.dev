@@ -1,0 +1,37 @@
+/* ==========================================================================
+   BASE COLOR
+========================================================================== */
+
+// Global Color
+$primary-color: palette-color(palette, primary);
+$secondary-color: palette-color(palette, secondary);
+$dark: palette-color(palette, dark);
+$grey: palette-color(palette, gray);
+$dark-grey: palette-color(palette, dark-grey);
+$globle-background-color: $primary-color;
+
+// Title & Body Color
+$title-color: $primary-color;
+$title-background-color: $secondary-color;
+$body-color: $dark;
+$body-background-color: $grey;
+
+// Link Color
+$link-color: $dark-grey;
+$link-website-color: $secondary-color;
+
+// Social Color
+$social-email-color: palette-color(social, red);
+$social-phone-color: palette-color(social, blue);
+$social-line-color: palette-color(social, green);
+
+//Icon Color
+$icon-vue-color: palette-color(icon, green);
+$icon-sass-color: palette-color(icon, pink);
+$icon-js-color: palette-color(palette, secondary);
+$icon-bootstrap-color: palette-color(icon, purple);
+$icon-html-color: palette-color(icon, orange);
+$icon-css-color: palette-color(icon, blue);
+$icon-ae-color: palette-color(icon, dark-purple);
+$icon-psd-color: palette-color(icon, light-blue);
+$icon-pr-color: palette-color(icon, light-purple);

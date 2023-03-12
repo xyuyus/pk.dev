@@ -1,0 +1,410 @@
+.container-content {
+  margin-left: 45px;
+  @include mq(tablet-wide) {
+    margin-left: 0;
+  }
+}
+.container-name {
+  gap: 20px;
+  border-inline: 2px solid $secondary-color;
+  text-align: center;
+  .holder-name {
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: $body-color;
+    display: inline-block;
+  }
+  .first-letter {
+    font-size: 60px;
+    color: $secondary-color;
+  }
+
+  .button-holder {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    a {
+      color: $body-color;
+      text-decoration: none;
+    }
+    .button {
+      font-size: 16px;
+      border: 3px solid $dark;
+      border-radius: 0.5em;
+      width: 12em;
+      height: 3em;
+      letter-spacing: 0.1em;
+      text-align: center;
+      line-height: 3em;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: 0.5s;
+      margin: 1em;
+      span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: $secondary-color;
+        transform: translateY(150%);
+        border-radius: 50%;
+        transition: 0.5s;
+        z-index: -1;
+      }
+      span:nth-child(1) {
+        left: calc((1 - 1) * 25%);
+        transition-delay: calc((1 - 1) * 0.1s);
+      }
+
+      span:nth-child(2) {
+        left: calc((2 - 1) * 25%);
+        transition-delay: calc((2 - 1) * 0.1s);
+      }
+
+      span:nth-child(3) {
+        left: calc((3 - 1) * 25%);
+        transition-delay: calc((3 - 1) * 0.1s);
+      }
+
+      span:nth-child(4) {
+        left: calc((4 - 1) * 25%);
+        transition-delay: calc((4 - 1) * 0.1s);
+      }
+      &:hover {
+        a {
+          color: $primary-color;
+        }
+
+        span {
+          transform: translateY(0) scale(2);
+        }
+      }
+    }
+  }
+
+  .contact-holder {
+    position: relative;
+    display: flex;
+    margin-block: 15px;
+
+    div {
+      position: relative;
+      list-style: none;
+      margin: 0 20px;
+      @include nth-child-before-hover(1, "\f0e0", $social-email-color);
+      @include nth-child-before-hover(2, "\f095", $social-phone-color);
+      @include nth-child-before-hover(3, "\f3c0", $social-line-color);
+      cursor: pointer;
+      span {
+        position: absolute;
+        top: 35px;
+        left: -33px;
+        opacity: 0;
+        color: $primary-color;
+        padding: 8px;
+        box-shadow: inset 0 0 0 0 $primary-color;
+        transition: color 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+        transition-delay: 0.2s;
+        min-width: 125px;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        &:before {
+          font-family: "FontAwesome";
+          position: absolute;
+          top: -10px;
+          left: 0;
+          font-size: 30px;
+          height: 0;
+          overflow: hidden;
+          transition: 0.5s ease-in-out;
+          border-bottom: 4px solid $secondary-color;
+        }
+      }
+      i {
+        font-size: 30px;
+        color: $dark;
+      }
+      &:hover {
+        a {
+          &:before {
+            height: 130%;
+            top: -8px;
+            border-color: transparent;
+          }
+        }
+        i {
+          color: $grey;
+        }
+        span {
+          opacity: 1;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.container-about {
+  .content {
+    text-align: center;
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  .content-desktop {
+    display: block;
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+  .content-tablet {
+    display: none;
+    @include mq(tablet) {
+      display: block;
+    }
+    @include mq(phone-wide) {
+      display: none;
+    }
+  }
+  .content-mobile {
+    display: none;
+    @include mq(phone-wide) {
+      display: block;
+    }
+  }
+  .title {
+    text-align: center;
+    font-size: 26px;
+  }
+  .item-left {
+    overflow: hidden;
+  }
+  .typing-text {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 18px;
+  }
+  .active {
+    @include typing-text-line(typewriter-desktop, desktop-one, 7.5, 0.7s);
+    @include typing-text-line(typewriter-desktop, desktop-two, 8, 3.5s);
+    @include typing-text-line(typewriter-desktop, desktop-three, 8.8, 7s);
+    @include typing-text-line(typewriter-desktop, desktop-four, 8.9, 10.3s);
+    @include typing-text-line(
+      typewriter-desktop,
+      desktop-five,
+      infinite,
+      13.5s
+    );
+    @include typing-text-line(typewriter-tablet, tablet-one, 8.2, 0.7s);
+    @include typing-text-line(typewriter-tablet, tablet-two, 7.4, 3.8s);
+    @include typing-text-line(typewriter-tablet, tablet-three, 8.5, 7s);
+    @include typing-text-line(typewriter-tablet, tablet-four, 8.9, 10.3s);
+    @include typing-text-line(typewriter-tablet, tablet-five, 7.5, 13.5s);
+    @include typing-text-line(typewriter-tablet, tablet-six, 7.5, 16.5s);
+    @include typing-text-line(typewriter-tablet, tablet-seven, 7.5, 19.5s);
+
+    @include typing-text-line(typewriter-mobile, mobile-one, 7.5, 0.7s);
+    @include typing-text-line(typewriter-mobile, mobile-two, 7.4, 3.8s);
+    @include typing-text-line(typewriter-mobile, mobile-three, 8.5, 7s);
+    @include typing-text-line(typewriter-mobile, mobile-four, 8.9, 10.3s);
+    @include typing-text-line(typewriter-mobile, mobile-five, 7.5, 13.5s);
+    @include typing-text-line(typewriter-mobile, mobile-six, 7.5, 16.5s);
+    @include typing-text-line(typewriter-mobile, mobile-seven, 7.5, 19.5s);
+    @include typing-text-line(typewriter-mobile, mobile-eight, 7.5, 22.5s);
+    @include typing-text-line(typewriter-mobile, mobile-nine, 7.5, 25s);
+    @include typing-text-line(typewriter-mobile, mobile-ten, 7.5, 28s);
+    @include typing-text-line(typewriter-mobile, mobile-eleven, 5, 31s);
+  }
+  @keyframes typewriter-desktop {
+    from {
+      width: 0;
+    }
+    to {
+      width: 768px;
+    }
+  }
+  @keyframes typewriter-tablet {
+    from {
+      width: 0;
+    }
+    to {
+      width: 576px;
+    }
+  }
+  @keyframes typewriter-mobile {
+    from {
+      width: 0;
+    }
+    to {
+      width: 376px;
+    }
+  }
+  @keyframes one-cursor {
+    from {
+      border-right-color: rgba(17, 17, 17, 0.9);
+    }
+    to {
+      border-right-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+.black {
+  background: $dark;
+}
+.vue,
+.nuxt {
+  @include color-and-hover($icon-vue-color);
+}
+.sass {
+  @include color-and-hover($icon-sass-color);
+}
+.js {
+  @include color-and-hover($icon-js-color);
+}
+.bootstrap {
+  @include color-and-hover($icon-bootstrap-color);
+}
+.html {
+  @include color-and-hover($icon-html-color);
+}
+.css {
+  @include color-and-hover($icon-css-color);
+}
+
+.ae {
+  @include color-and-hover($icon-ae-color);
+}
+.psd {
+  @include color-and-hover($icon-psd-color);
+}
+.pr {
+  @include color-and-hover($icon-pr-color);
+}
+
+.container-experience {
+  .timeline-holder {
+    margin-left: 90px;
+    @include mq(tablet-wide) {
+      margin-left: 35px;
+    }
+    @include mq(tablet) {
+      margin-left: 0;
+      padding-left: 0;
+      padding-inline: 10px;
+    }
+  }
+  .timeline-event-time {
+    left: -145px;
+    .event-time-mobile {
+      display: none;
+      @include mq(tablet) {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+    .event-time-desktop {
+      display: block;
+
+      @include mq(tablet) {
+        display: none;
+      }
+    }
+    @include mq(tablet-wide) {
+      left: -100px;
+    }
+    @include mq(tablet) {
+      position: relative;
+      left: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+  .timeline-circle {
+    @include mq(tablet-wide) {
+      display: none;
+    }
+  }
+  .timeline-event {
+    @include mq(tablet) {
+      margin: 0;
+    }
+    &:before {
+      @include mq(tablet-wide) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      &::before {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      .timeline-event-time {
+        left: -145px;
+        @include mq(tablet-wide) {
+          left: -100px;
+        }
+        @include mq(tablet) {
+          position: relative;
+          left: 0;
+        }
+      }
+    }
+  }
+  .btn-collapse {
+    margin-bottom: 30px;
+    // span {
+    //   @include mq(tablet-wide) {
+    //     display: none;
+    //   }
+    // }
+  }
+
+  .card-body {
+    a {
+      color: $link-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: $link-color;
+      }
+    }
+    .website {
+      color: $link-website-color;
+      text-decoration: underline;
+
+      text-decoration-color: $link-website-color;
+      &:hover {
+        text-decoration: none;
+        color: $link-website-color;
+      }
+    }
+  }
+}
+
+#collapse-3ds,
+#collapse-724 {
+  .card {
+    width: 660px;
+    @include mq(tablet-wide) {
+      width: 550px;
+      position: relative;
+      left: -40px;
+    }
+    @include mq(tablet) {
+      left: 0;
+    }
+    @include mq(phone-wide) {
+      width: 375px;
+      left: 0;
+    }
+  }
+}

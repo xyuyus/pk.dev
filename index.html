@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pornthip | Kaakaew</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/main.css" />
+</head>
+<script>
+    function openHamburger() {
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("main-menu");
+        hamburger.classList.toggle("on");
+        menu.classList.toggle("on");
+    }
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        var typingtext = document.querySelectorAll(".typing-text");
+        var windowHeight = window.innerHeight;
+        var elementVisible = 150;
+
+        for (var i = 0; i < reveals.length; i++) {
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementBottom = reveals[i].getBoundingClientRect().bottom;
+            console.log(elementTop, elementBottom, windowHeight - elementVisible);
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+        for (var i = 0; i < typingtext.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = typingtext[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                typingtext[i].classList.add("active");
+            } else {
+                typingtext[i].classList.remove("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+
+</script>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/5f05dd6633.js" crossorigin="anonymous"></script>
+    <div class="container-body">
+        <header>
+            <div class="header-side-left">
+                <div id="hamburger" class="hamburger" onclick="openHamburger()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="side-name">
+                <span>PORNTHIP KANKAEW</span>
+            </div>
+            <div class="menu-holder">
+                <nav id="main-menu" class="main-menu">
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about-me">ABOUT ME</a></li>
+                        <li><a href="#education">EDUCATION</a></li>
+                        <li><a href="#skill">SKILL</a></li>
+                        <li><a href="#experience">EXPERIENCE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container-content">
+            <section class="container-name" id="home">
+                <h1 class="holder-name animate__animated animate__bounceInDown">
+                    <span class="full-name"><span class="first-letter">P</span>ORNTHIP
+                        <span class="first-letter">K</span>ANKAEW
+                    </span>
+                </h1>
+                <div class="button-holder animate__animated animate__zoomIn">
+                    <div class="button">
+                        <a href="">
+                            My Resume
+                            <span></span><span></span><span></span><span></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-holder animate__animated animate__zoomIn">
+                    <div>
+                        <span>pk.yuyus@gmail.com</span><a href="mailto: pk.yuyus@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <div>
+                        <span>083-014-8382</span><a href="tel:+66830148382" target="_blank"><i
+                                class="fa-solid fa-phone"></i></a>
+                    </div>
+                    <div>
+                        <span>ID : Elleyu43</span><a href="http://line.me/ti/p/~Elleyu43" target="_blank"><i
+                                class="fa-brands fa-line"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container-about" id="about-me">
+                <div class="item-left">ABOUT ME</div>
+                <div class="item-right">
+                    <div class="content content-desktop">
+                        <h2 class="title p-3 reveal fade-bottom">
+                            Get to know me a little more!
+                        </h2>
+                        <p class="desktop-one-line typing-text">
+                            1 year and 5 months of internship experience in building
+                            responsive websites,
+                        </p>
+                        <p class="desktop-two-line typing-text">
+                            Now I'm a senior at King Mongkut's University of Technology
+                            Thonburi (KMUTT)
+                        </p>
+                        <p class="desktop-three-line typing-text">
+                            Faculty of School of Information Technology (SIT) Program in
+                            Digital Service Innovation (DSI).
+                        </p>
+                        <p class="desktop-four-line typing-text">
+                            A highly motivated with an understanding of HTML, CSS and
+                            JavaScript. Having a productive
+                        </p>
+                        <p class="desktop-five-line typing-text">
+                            team player, energetic, and fast learning. looking for Front-End
+                            Developer (Full-time).
+                        </p>
+                    </div>
+                    <div class="content content-tablet">
+                        <h2 class="title p-3 reveal fade-bottom">
+                            Get to know me a little more!
+                        </h2>
+                        <p class="tablet-one-line typing-text">
+                            1 year and 5 months of internship experience in building
+                            responsive
+                        </p>
+                        <p class="tablet-two-line typing-text">
+                            websites, Now I'm a senior at King Mongkut's University of
+                        </p>
+                        <p class="tablet-three-line typing-text">
+                            Technology Thonburi (KMUTT) Faculty of School of Information
+                        </p>
+                        <p class="tablet-four-line typing-text">
+                            Technology (SIT) Program in
+                            Digital Service Innovation (DSI).
+                        </p>
+                        <p class="tablet-five-line typing-text">
+                            A highly motivated with an understanding of HTML, CSS and
+
+                        </p>
+                        <p class="tablet-six-line typing-text">
+                            JavaScript. Having a productive
+                            team player, energetic, and fast
+                        </p>
+                        <p class="tablet-seven-line typing-text">
+                            learning. looking for Front-End
+                            Developer (Full-time).
+                        </p>
+                    </div>
+                    <div class="content content-mobile">
+                        <h2 class="title p-3 reveal fade-bottom">
+                            Get to know me a little more!
+                        </h2>
+                        <p class="mobile-one-line typing-text">
+                            1 year and 5 months of internship experience
+                        </p>
+                        <p class="mobile-two-line typing-text">
+                            in building
+                            responsive
+                            websites, Now I'm a
+                        </p>
+                        <p class="mobile-three-line typing-text">
+                            senior at King Mongkut's University of
+                        </p>
+                        <p class="mobile-four-line typing-text">
+                            Technology Thonburi (KMUTT) Faculty of
+                        </p>
+                        <p class="mobile-five-line typing-text">
+                            School of
+                            Information Technology (SIT)
+
+                        </p>
+                        <p class="mobile-six-line typing-text">
+                            Program in
+                            Digital Service Innovation (DSI).
+                        </p>
+                        <p class="mobile-seven-line typing-text">
+                            A highly motivated with an
+                            understanding of
+                        </p>
+                        <p class="mobile-eight-line typing-text">
+                            HTML, CSS and
+                            JavaScript. Having
+                        </p>
+                        <p class="mobile-nine-line typing-text">
+                            productive
+                            team player, energetic, and fast
+
+                        </p>
+                        <p class="mobile-ten-line typing-text">
+
+                            learning. looking for Front-End
+                            Developer
+                        </p>
+                        <p class="mobile-eleven-line typing-text">
+
+                            (Full-time).
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="container-education" id="education">
+                <div class="item-left reveal fade-left">
+                    <ul class="timeline-holder">
+                        <li class="timeline-event">
+                            <div class="timeline-event-time">2013</div>
+                            <span class="timeline-circle"></span>
+                            <div class="timeline-event-detail">
+                                <h4>High school</h4>
+                                Benjamarachalai School Under the Royal Patronage of His
+                                Majesty the King, BR
+                                <br />
+                                Program : Gifted
+                            </div>
+                        </li>
+                        <li class="timeline-event">
+                            <div class="timeline-event-time">2019</div>
+                            <span class="timeline-circle"></span>
+                            <div class="timeline-event-detail">
+                                <h4>University</h4>
+                                King Mongkut's University of Technology Thonburi, KMUTT
+                                <br />
+                                Faculty : School of Information Technology (SIT) <br />
+                                Major : Digital Service Innovation (DSI)
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-right">EDUCATION</div>
+            </section>
+            <section class="container-skill" id="skill">
+                <div class="item-left">SKILL</div>
+                <div class="item-right reveal fade-bottom">
+                    <div class="wrapper">
+                        <article class="badge black vue">
+                            <div class="rounded">
+                                <i class="fab fa-vuejs"></i><span>vue.js 2, 3</span>
+                            </div>
+                        </article>
+                        <article class="badge black nuxt">
+                            <div class="rounded">
+                                <img
+                                    src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/null/external-nuxt-js-a-free-and-open-source-web-application-framework-logo-shadow-tal-revivo.png" /><span>nuxt.js
+                                    2, 3</span>
+                            </div>
+                        </article>
+                        <article class="badge black sass">
+                            <div class="rounded">
+                                <i class="fab fa-sass"></i><span>sass</span>
+                            </div>
+                        </article>
+                        <article class="badge black js">
+                            <div class="rounded">
+                                <i class="fab fa-js-square"></i><span>javascript</span>
+                            </div>
+                        </article>
+                        <article class="badge black bootstrap">
+                            <div class="rounded">
+                                <i class="fab fa-bootstrap"></i><span>bootstrap</span>
+                            </div>
+                        </article>
+                        <article class="badge black html">
+                            <div class="rounded">
+                                <i class="fab fa-html5"></i> <span>html 5</span>
+                            </div>
+                        </article>
+                        <article class="badge black css">
+                            <div class="rounded">
+                                <i class="fab fa-css3-alt"></i><span>css</span>
+                            </div>
+                        </article>
+                        <article class="badge black ae">
+                            <div class="rounded">
+                                <img src="https://img.icons8.com/color/144/null/adobe-after-effects--v1.png" /><span>
+                                    after effects</span>
+                            </div>
+                        </article>
+                        <article class="badge black psd">
+                            <div class="rounded">
+                                <img src="https://img.icons8.com/color/144/null/adobe-photoshop--v1.png" /><span>
+                                    photoshop</span>
+                            </div>
+                        </article>
+                        <article class="badge black pr">
+                            <div class="rounded">
+                                <img src="https://img.icons8.com/color/144/null/adobe-premiere-pro--v1.png" /><span>
+                                    premiere pro</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="container-experience" id="experience-1">
+                <div class="item-left reveal fade-left">
+                    <ul class="timeline-holder" id="groupcollapse">
+                        <li class="timeline-event">
+                            <div class="timeline-event-time">
+                                <div class="event-time-desktop">
+                                    <p>Jun 2021</p>
+                                    <p>- Jul 2021</p>
+                                </div>
+
+                                <p class="event-time-mobile">Jun 2021 - Jul 2021</p>
+
+                            </div>
+                            <span class="timeline-circle"></span>
+                            <div class="timeline-event-detail">
+                                <a class="btn btn-collapse" data-bs-toggle="collapse" href="#collapse-3ds" role="button"
+                                    aria-expanded="false" aria-controls="collapse-3ds">
+                                    <h4>3DS INTERACTIVE CO., LTD. | Programmer</h4>
+                                    <span>
+                                        <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="arrow" stroke="none" stroke-width="1" fill="none"
+                                                fill-rule="evenodd">
+                                                <path class="one"
+                                                    d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                                                    fill="#FFFFFF"></path>
+                                                <path class="two"
+                                                    d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                                                    fill="#FFFFFF"></path>
+                                                <path class="three"
+                                                    d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                                                    fill="#000"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="collapse collapse-horizontal show" id="collapse-3ds"
+                                data-bs-parent="#groupcollapse">
+                                <div class="card card-body">
+                                    Made a website about filling out the workplans
+                                    <ul>
+                                        <li>
+                                            with
+                                            <a href="https://v2.vuejs.org/" target="_blank">Vue.js 2
+                                            </a>
+                                            ,
+                                            <a href="https://firebase.google.com/" target="_blank">
+                                                Firebase,</a>
+
+                                            <a href="https://bootstrap-vue.org/" target="_blank">BootstrapVue</a>
+                                            and
+                                            <a href="https://vuetifyjs.com/en/" target="_blank">Vuetify</a>
+                                        </li>
+                                        <li>authentication with google</li>
+                                        <li>
+                                            choose to view information for each day from the
+                                            calendar
+                                        </li>
+                                        <li>add project, feature and task about work.</li>
+                                        <li>set the project status, complete or incomplete</li>
+                                        <li>search workplans by user name and project name</li>
+                                        <li>
+                                            First design of project workplans :
+                                            <a class="website"
+                                                href="https://drive.google.com/file/d/1wJEPoSQlNSti_XNIEwn0lQqgWLrJv14f/view?usp=share_link"
+                                                target="_blank">firstDesign-3DS.pdf</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-event">
+                            <div class="timeline-event-time">
+                                <div class="event-time-desktop">
+                                    <p>Jan 2022</p>
+                                    <p>- Apr 2023</p>
+                                </div>
+
+                                <p class="event-time-mobile">Jan 2022 - Apr 2023</p>
+                            </div>
+
+                            <span class="timeline-circle"></span>
+                            <div class="timeline-event-detail">
+                                <a class="btn btn-collapse" data-bs-toggle="collapse" href="#collapse-724" role="button"
+                                    aria-expanded="false" aria-controls="collapse-724">
+                                    <h4>724 Market Company Limited | Front End Developer</h4>
+
+                                    <span>
+                                        <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="arrow" stroke="none" stroke-width="1" fill="none"
+                                                fill-rule="evenodd">
+                                                <path class="one"
+                                                    d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                                                    fill="#FFFFFF"></path>
+                                                <path class="two"
+                                                    d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                                                    fill="#FFFFFF"></path>
+                                                <path class="three"
+                                                    d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                                                    fill="#000"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="collapse collapse-horizontal " id="collapse-724"
+                                data-bs-parent="#groupcollapse">
+                                <div class="card card-body">
+                                    <div>
+                                        Made a website about office rental
+                                        <ul>
+                                            <li>
+                                                with
+                                                <a href="https://nuxtjs.org/" target="_blank">Nuxt.js 2,</a>
+                                                <a href="https://sass-lang.com/" target="_blank"> Sass,</a>
+                                                <a href="https://bootstrap-vue.org/" target="_blank">Bootstrap,</a>
+                                                <a href="https://bootstrap-vue.org/" target="_blank">BootstrapVue,</a>
+                                                <a href="https://axios.nuxtjs.org/usage" target="_blank">Axios,</a>
+                                                <a href="https://fontawesome.com/" target="_blank">Fontawesome,</a>
+                                                <a href="https://vee-validate.logaretm.com/v4/"
+                                                    target="_blank">Vee-validate,</a>
+                                                <a href="https://lodash.com/" target="_blank">lodash,</a>
+                                                <a href="https://gs-shop.github.io/vue-slick-carousel/#/"
+                                                    target="_blank">Vue-slick-carousel,</a>
+                                                <a href="http://numeraljs.com/" target="_blank">numeral,</a>
+                                                <a href="https://www.lightgalleryjs.com/"
+                                                    target="_blank">lightgalleryjs</a>
+                                                and
+                                                <a href="https://github.com/microcipcip/cookie-universal/tree/master/packages/cookie-universal-nuxt#readme"
+                                                    target="_blank">cookie-universal-nuxt</a>
+                                            </li>
+                                            <li>collect information and details of office buildings for rent</li>
+                                            <li>can filter type, price range, location and search building name</li>
+                                            <li>have distance of the building to user, number of people who viewed
+                                                the information and number of people wanting to contact for more
+                                                information</li>
+                                            <li>
+                                                website :
+                                                <a class="website" href="https://properties.724.co.th/"
+                                                    target="_blank">properties.724.co.th</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mt-2">
+                                        Made a website about online learning
+                                        <ul>
+                                            <li>
+                                                with
+                                                <a href="https://nuxtjs.org/" target="_blank">Nuxt.js 2,</a>
+                                                <a href="https://sass-lang.com/" target="_blank">Sass,</a>
+                                                <a href="https://bootstrap-vue.org/" target="_blank">Bootstrap,</a>
+                                                <a href="https://bootstrap-vue.org/" target="_blank">BootstrapVue,</a>
+                                                <a href="https://axios.nuxtjs.org/usage" target="_blank">Axios,</a>
+                                                <a href="https://fontawesome.com/" target="_blank">Fontawesome,</a>
+                                                <a href="https://vee-validate.logaretm.com/v4/"
+                                                    target="_blank">Vee-validate,</a>
+                                                <a href="https://day.js.org/" target="_blank">dayjs,</a>
+                                                <a href="https://gs-shop.github.io/vue-slick-carousel/#/"
+                                                    target="_blank">Vue-slick-carousel,</a>
+
+                                                <a href="http://numeraljs.com/" target="_blank">numeral</a>
+                                            </li>
+                                            <li>authentication with otp and face scan to verify</li>
+                                            <li>can filter type, category and search course name, teacher name</li>
+                                            <li>contents of the lesson in course have pdf, video, and youtube</li>
+                                            <li>
+                                                buy a course > study > take an exam > do a survey > receive a
+                                                certificate
+                                            </li>
+                                            <li>
+                                                website :
+                                                <a class="website" href="https://gigatrain.co/"
+                                                    target="_blank">gigatrain.co</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-right">EXPERIENCE</div>
+            </section>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
