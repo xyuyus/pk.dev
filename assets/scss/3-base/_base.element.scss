@@ -85,11 +85,6 @@ section {
     align-items: center;
     justify-content: center;
   }
-  &:last-child {
-    @include mq(tablet) {
-      height: 200vh;
-    }
-  }
   ~ .container-experience {
     background-color: $body-background-color;
     @include mq(desktop) {

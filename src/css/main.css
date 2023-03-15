@@ -215,11 +215,6 @@ section:first-child {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media only screen and (max-width: 767px) {
-  section:last-child {
-    height: 200vh;
-  }
-}
 section ~ .container-experience {
   background-color: #eeeeee;
 }
@@ -1265,6 +1260,9 @@ path.three {
   background-color: #ff00ff;
 }
 
+.container-experience .item-left {
+  overflow: scroll;
+}
 .container-experience .timeline-holder {
   margin-left: 90px;
 }

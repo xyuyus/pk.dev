@@ -286,6 +286,9 @@
 }
 
 .container-experience {
+  .item-left {
+    overflow: scroll;
+  }
   .timeline-holder {
     margin-left: 90px;
     @include mq(tablet-wide) {
